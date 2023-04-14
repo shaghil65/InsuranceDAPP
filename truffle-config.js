@@ -19,7 +19,7 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const mnemonic = "chef gaze admit climb vocal skin price sing diamond large path truly";
+const mnemonic = "";
 
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -58,24 +58,24 @@ module.exports = {
     // },
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    sepolia: {
-      provider: () => new HDWalletProvider(mnemonic, `wss://eth-sepolia.g.alchemy.com/v2/El8nXSuehIhb1hkZ-27Z-cguKN2qdyev`),
-      network_id: "*",       // Ropsten's id
-      gas: 3000000,        // Ropsten has a lower block limit than mainnet
-      gasPrice : 10000000000,
-      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-      },
-    // goerli: {
-    // provider: () => new HDWalletProvider(mnemonic, `https://eth-goerli.g.alchemy.com/v2/hx_QgKo4IfUTvm4YdIIF2ZnoZ09rpzaI`),
-    // network_id: 5,       // Ropsten's id
-    // gas: 3000000,        // Ropsten has a lower block limit than mainnet
-    // gasPrice : 10000000000,
-    // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-    // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    // sepolia: {
+    //   provider: () => new HDWalletProvider(mnemonic, `wss://eth-sepolia.g.alchemy.com/v2/El8nXSuehIhb1hkZ-27Z-cguKN2qdyev`),
+    //   network_id: "*",       // Ropsten's id
+    //   gas: 3000000,        // Ropsten has a lower block limit than mainnet
+    //   gasPrice : 10000000000,
+    //   confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+    //   timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+    //   skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    //   },
+    goerli: {
+    provider: () => new HDWalletProvider(mnemonic, `https://eth-goerli.g.alchemy.com/v2/hx_QgKo4IfUTvm4YdIIF2ZnoZ09rpzaI`),
+    network_id: 5,       // Ropsten's id
+    gas: 3000000,        // Ropsten has a lower block limit than mainnet
+    gasPrice : 10000000000,
+    confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+    timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+    skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
